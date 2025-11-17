@@ -57,3 +57,33 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+---
+
+## Backend expectations & project notes
+
+This frontend expects a Spring Cloud micro-services backend (or gateway) exposing these endpoints under `/api`:
+
+- `GET /api/companies`, `GET /api/companies/{id}`, `POST /api/companies`, `PUT /api/companies/{id}`, `DELETE /api/companies/{id}`
+- `GET /api/stocks`, `GET /api/stocks/{id}`, `POST /api/stocks`, `DELETE /api/stocks/{id}`
+- `POST /api/chatbot/message`
+
+Services include small placeholders for JWT/OAuth headers. Ensure CORS and routing through your API gateway are configured.
+
+To install Angular Material (optional UI):
+
+```bash
+npm install @angular/material @angular/cdk @angular/animations
+npx ng add @angular/material
+```
+
+Run development server:
+
+```bash
+npm start
+```
+
+Potential next improvements:
+- Replace simple lists with `MatTable` + `MatPaginator`, add search/filtering
+- Add confirmation dialogs and snackbars for CRUD operations
+- Add unit tests for services and components
