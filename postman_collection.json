@@ -1,0 +1,29 @@
+{
+  "info": {
+    "name": "Microservices Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Company",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\"name\":\"Acme\",\"address\":\"1 Road\"}" },
+        "url": { "raw": "http://localhost:8091/api/companies", "protocol": "http", "host": ["localhost"], "port": "8091", "path": ["api","companies"] }
+      }
+    },
+    {
+      "name": "List Companies",
+      "request": { "method": "GET", "url": { "raw": "http://localhost:8091/api/companies" } }
+    },
+    {
+      "name": "Create Stock",
+      "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\"companyId\":1,\"quantity\":100}" }, "url": { "raw": "http://localhost:8092/api/stocks" } }
+    },
+    {
+      "name": "Chat",
+      "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\"question\":\"Hello\"}" }, "url": { "raw": "http://localhost:8093/api/chat" } }
+    }
+  ]
+}

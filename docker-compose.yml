@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  discovery:
+    build: ./discovery-service
+    container_name: discovery
+    ports:
+      - "8761:8761"
+
+  gateway:
+    build: ./gateway-service
+    container_name: gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - discovery
+
+  company:
+    build: ./company-service
+    container_name: company
+    ports:
+      - "8091:8091"
+    depends_on:
+      - discovery
+
+  stock:
+    build: ./stock-service
+    container_name: stock
+    ports:
+      - "8092:8092"
+    depends_on:
+      - discovery
+      - company
+
+  chat:
+    build: ./chat-bot-service
+    container_name: chat
+    ports:
+      - "8093:8093"
+    depends_on:
+      - discovery
