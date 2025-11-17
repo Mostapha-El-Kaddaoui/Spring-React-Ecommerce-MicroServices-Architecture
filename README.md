@@ -80,4 +80,15 @@ La console Eureka affiche l'état des services enregistrés (instances, statut, 
 Image (exemple) :
 
 ![Eureka Dashboard](./eurika.png)
-# Spring-React-Ecommerce-MicroServices-Architecture
+
+## Front-end
+La partie front-end (SPA React) consomme les APIs exposées par les microservices. Ci‑dessous des captures d'écran d'exemples de pages pour la gestion :
+Images (placeholders) :
+
+### Companies Management
+![Companies - First Page](./first-page.png)
+![Companies](./delete-company.png)
+
+### Stocks Management
+[Stocks - New one](./new-stocks.png)
+[Stocks - New one](./new-stocks-2.png)
