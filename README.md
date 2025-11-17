@@ -90,5 +90,5 @@ Images (placeholders) :
 ![Companies](./delete-company.png)
 
 ### Stocks Management
-[Stocks - New one](./new-stocks.png)
-[Stocks - New one](./new-stocks-2.png)
+![Stocks - New one](./new-stocks.png)
+![Stocks - New one](./new-stocks-2.png)
